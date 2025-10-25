@@ -76,36 +76,7 @@ def predict_cluster(
         cluster = int(labels[0])
         return f"🟢 Predicted Cluster (DBSCAN): {get_cluster_name(cluster)}"
 
-# =========================
-# Custom CSS for WOW Effect
-# =========================
-custom_css = """
-body {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-.gradio-container {
-    background: transparent !important;
-}
-h1, h2, h3 {
-    text-align: center;
-    color: white !important;
-}
-input, select, textarea {
-    border-radius: 12px !important;
-}
-button {
-    background: linear-gradient(90deg, #ff6a00, #ee0979) !important;
-    border: none !important;
-    color: white !important;
-    font-weight: bold;
-    border-radius: 12px !important;
-}
-button:hover {
-    background: linear-gradient(90deg, #ee0979, #ff6a00) !important;
-}
-"""
+
 
 # =========================
 # Build Gradio Interface
@@ -135,7 +106,7 @@ iface = gr.Interface(
     outputs=gr.Textbox(label="🔮 Cluster Result", lines=2),
     title="🌈 Customer Cluster Prediction App",
     description="Enter customer data and select a model to predict whether the user is a 💎 Premium, 💰 Average, or 🛍️ Occasional spender.",
-    css=custom_css,
+
 )
 
 if __name__ == "__main__":
